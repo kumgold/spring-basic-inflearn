@@ -1,5 +1,6 @@
 package com.hellospring.demo;
 
+import com.hellospring.demo.discount.DiscountPolicy;
 import com.hellospring.demo.discount.FixDiscountPolicy;
 import com.hellospring.demo.member.MemberService;
 import com.hellospring.demo.member.MemberServiceImpl;
@@ -10,10 +11,18 @@ import com.hellospring.demo.order.OrderServiceImpl;
 public class AppConfig {
 
     public MemberService memberService() {
-        return new MemberServiceImpl(new MemoryMemberRepository());
+        return new MemberServiceImpl(memberRepository());
     }
 
     public OrderService orderService() {
-        return new OrderServiceImpl(new MemoryMemberRepository(), new FixDiscountPolicy());
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
+    }
+
+    private MemoryMemberRepository memberRepository() {
+        return new MemoryMemberRepository();
+    }
+
+    public DiscountPolicy discountPolicy() {
+        return new FixDiscountPolicy();
     }
 }

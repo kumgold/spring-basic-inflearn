@@ -4,7 +4,6 @@ import com.hellospring.demo.AppConfig;
 import com.hellospring.demo.member.Grade;
 import com.hellospring.demo.member.Member;
 import com.hellospring.demo.member.MemberService;
-import com.hellospring.demo.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
