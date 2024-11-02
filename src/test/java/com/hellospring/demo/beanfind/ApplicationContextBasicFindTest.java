@@ -3,7 +3,6 @@ package com.hellospring.demo.beanfind;
 import com.hellospring.demo.AppConfig;
 import com.hellospring.demo.member.MemberService;
 import com.hellospring.demo.member.MemberServiceImpl;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
